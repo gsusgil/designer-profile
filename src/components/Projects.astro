@@ -1,0 +1,57 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+---
+
+<section
+  class={`
+w-full max-w-[1400px]
+grid lg:grid-cols-10 auto-rows-[30rem] gap-4
+mx-auto p-6 md:p-12 lg:p-20
+`}
+>
+  <ProjectItem class="col-span-10 lg:col-span-4" title="RMS">
+    <p slot="content" class="max-w-xl">
+       Experts in restaurant chain management, presents a design <strong>combining triangles and waves,</strong> suggesting a visual representation of the <strong>partners' initials RMS.</strong>
+    </p>
+    <div
+      slot="image"
+      class="transition-scale absolute bottom-0 left-0 top-0 right-0 -z-10 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/rms-imge.webp')"
+    >
+    </div>
+  </ProjectItem>
+  <ProjectItem class="col-span-10 lg:col-span-6" title="Kaory">
+    <p slot="content" class="max-w-xl">
+        With wavy elements that capture the <strong>spirit of the Y2K era,</strong> creating a different and attractive brand that stands out in the world of beauty and nail fashion.
+    </p>
+
+    <div
+      slot="image"
+      class="transition-scale absolute bottom-0 left-0 top-0 right-0 -z-10 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/kaory-image.webp')"
+    >
+    </div>
+  </ProjectItem>
+  <ProjectItem class="col-span-10 lg:col-span-6" title="Social Media">
+    <p slot="content" class="max-w-xl">
+        I create pieces to empower brands with visual elements and a strategic approach <strong>to visual communication.</strong> Positioning the identity in the digital world and thus generating meaningful <strong>connections with the community.</strong>
+    </p>
+    <div
+      slot="image"
+      class="transition-scale absolute bottom-0 left-0 top-0 right-0 -z-10 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/social-media.webp')"
+    >
+    </div>
+  </ProjectItem>
+  <ProjectItem class="col-span-10 lg:col-span-4" title="Dpiier">
+    <p slot="content" class="max-w-xl">
+        Their custom typo is distinctive, <strong>captures dpiier's distinctive energy and attitude.</strong> This design aligns with his music and character.
+    </p>
+    <div
+      slot="image"
+      class="transition-scale absolute bottom-0 left-0 top-0 right-0 -z-10 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/dppier-imagepng.webp')"
+    >
+    </div>
+  </ProjectItem>
+</section>

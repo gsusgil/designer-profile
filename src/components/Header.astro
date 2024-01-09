@@ -1,0 +1,56 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<header id="header-nav" class="fixed w-screen py-4 z-50 top-0 px-8 lg:px-0">
+  <div class="flex max-w-6xl mx-auto justify-between items-center">
+    <Logo class="w-12" />
+    <nav class="flex flex-row gap-x-10">
+      <a class="text-white tracking-wider hover:text-blue-850" href="/">Home</a>
+      <a class="text-white tracking-wider hover:text-blue-850" href="#about-me"
+        >About me</a
+      >
+      <a class="text-white tracking-wider hover:text-blue-850" href="#projects"
+        >Projects</a
+      >
+    </nav>
+    <button
+      data-modal-target="modal-resume"
+      id="btn-resume"
+      class="border rounded-lg inline-block text-white tracking-wider border-white px-6 py-2 justify-self-end hover:border-blue-850 hover:bg-blue-850 hover:text-orange-650 duration-300"
+      >Resume
+    </button>
+  </div>
+</header>
+
+<style>
+  :hover#btn-resume {
+    animation: wiggle 2s linear infinite;
+  }
+
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+</style>

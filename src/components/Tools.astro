@@ -1,0 +1,75 @@
+<div class="infinity-scroll">
+  <div class="logos-slide">
+    <img src="/adobe-illustrator-cc-icon.svg" alt="" />
+    <img src="/adobe-photoshop-2.svg" alt="" />
+    <img src="/after-effects-1.svg" alt="" />
+    <img src="/figma-5.svg" alt="" />
+    <img src="/github-icon-1.svg" alt="" />
+    <img src="/html-1.svg" alt="" />
+    <img src="/css-3.svg" alt="" />
+    <img src="/javascript-1.svg" alt="" />
+    <img src="/vue-js-1.svg" alt="" />
+  </div>
+  <div class="logos-slide">
+    <img src="/tailwindcss.svg" alt="" />
+    <img src="/astro.svg" alt="" />
+    <img src="/adobe-illustrator-cc-icon.svg" alt="" />
+    <img src="/adobe-photoshop-2.svg" alt="" />
+    <img src="/after-effects-1.svg" alt="" />
+    <img src="/figma-5.svg" alt="" />
+    <img src="/github-icon-1.svg" alt="" />
+    <img src="/html-1.svg" alt="" />
+    <img src="/css-3.svg" alt="" />
+    <img src="/javascript-1.svg" alt="" />
+    <img src="/vue-js-1.svg" alt="" />
+  </div>
+</div>
+<style>
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .infinity-scroll {
+    overflow: hidden;
+    padding: 30px 0;
+    background-color: #f2f2f2;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .infinity-scroll:before,
+  .infinity-scroll:after {
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  .infinity-scroll:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #f2f2f2);
+  }
+  .infinity-scroll:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f2f2f2);
+  }
+
+  .infinity-scroll:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  .logos-slide {
+    display: inline-flex;
+    animation: 30s slide infinite linear;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+    transition: filter 0.3s ease;
+  }
+</style>
