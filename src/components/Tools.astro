@@ -1,27 +1,29 @@
 <div class="infinity-scroll">
-  <div class="logos-slide">
-    <img src="/adobe-illustrator-cc-icon.svg" alt="" />
-    <img src="/adobe-photoshop-2.svg" alt="" />
-    <img src="/after-effects-1.svg" alt="" />
-    <img src="/figma-5.svg" alt="" />
-    <img src="/github-icon-1.svg" alt="" />
-    <img src="/html-1.svg" alt="" />
-    <img src="/css-3.svg" alt="" />
-    <img src="/javascript-1.svg" alt="" />
-    <img src="/vue-js-1.svg" alt="" />
-  </div>
-  <div class="logos-slide">
-    <img src="/tailwindcss.svg" alt="" />
-    <img src="/astro.svg" alt="" />
-    <img src="/adobe-illustrator-cc-icon.svg" alt="" />
-    <img src="/adobe-photoshop-2.svg" alt="" />
-    <img src="/after-effects-1.svg" alt="" />
-    <img src="/figma-5.svg" alt="" />
-    <img src="/github-icon-1.svg" alt="" />
-    <img src="/html-1.svg" alt="" />
-    <img src="/css-3.svg" alt="" />
-    <img src="/javascript-1.svg" alt="" />
-    <img src="/vue-js-1.svg" alt="" />
+  <div class="logos-container">
+    <div class="logos-slide">
+      <img src="/adobe-illustrator-cc-icon.svg" alt="" />
+      <img src="/adobe-photoshop-2.svg" alt="" />
+      <img src="/after-effects-1.svg" alt="" />
+      <img src="/figma-5.svg" alt="" />
+      <img src="/github-icon-1.svg" alt="" />
+      <img src="/html-1.svg" alt="" />
+      <img src="/css-3.svg" alt="" />
+      <img src="/javascript-1.svg" alt="" />
+      <img src="/vue-js-1.svg" alt="" />
+    </div>
+    <div class="logos-slide">
+      <img src="/tailwindcss.svg" alt="" />
+      <img src="/astro.svg" alt="" />
+      <img src="/adobe-illustrator-cc-icon.svg" alt="" />
+      <img src="/adobe-photoshop-2.svg" alt="" />
+      <img src="/after-effects-1.svg" alt="" />
+      <img src="/figma-5.svg" alt="" />
+      <img src="/github-icon-1.svg" alt="" />
+      <img src="/html-1.svg" alt="" />
+      <img src="/css-3.svg" alt="" />
+      <img src="/javascript-1.svg" alt="" />
+      <img src="/vue-js-1.svg" alt="" />
+    </div>
   </div>
 </div>
 <style>
@@ -62,6 +64,11 @@
   .infinity-scroll:hover .logos-slide {
     animation-play-state: paused;
   }
+
+  .logos-container{
+    overflow: hidden;
+  }
+
   .logos-slide {
     display: inline-flex;
     animation: 30s slide infinite linear;
@@ -71,5 +78,11 @@
     height: 50px;
     margin: 0 40px;
     transition: filter 0.3s ease;
+  }
+
+  @media (max-width: 767px) {
+    .logos-slide img {
+      margin: 0 40px;
+    }
   }
 </style>
