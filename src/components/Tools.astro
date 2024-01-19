@@ -1,16 +1,18 @@
-<div class="scroller" data-speed="slower">
-  <div class="logos-slide scroller__inner">
-    <img src="/adobe-illustrator-cc-icon.svg" alt="" />
-    <img src="/adobe-photoshop-2.svg" alt="" />
-    <img src="/after-effects-1.svg" alt="" />
-    <img src="/figma-5.svg" alt="" />
-    <img src="/github-icon-1.svg" alt="" />
-    <img src="/html-1.svg" alt="" />
-    <img src="/css-3.svg" alt="" />
-    <img src="/javascript-1.svg" alt="" />
-    <img src="/vue-js-1.svg" alt="" />
-    <img src="/tailwindcss.svg" alt="" />
-    <img src="/astro.svg" alt="" />
+<div class="scroll-container">
+  <div class="scroller">
+    <div class="logos-slide scroller__inner">
+      <img src="/adobe-illustrator-cc-icon.svg" alt="" />
+      <img src="/adobe-photoshop-2.svg" alt="" />
+      <img src="/after-effects-1.svg" alt="" />
+      <img src="/figma-5.svg" alt="" />
+      <img src="/github-icon-1.svg" alt="" />
+      <img src="/html-1.svg" alt="" />
+      <img src="/css-3.svg" alt="" />
+      <img src="/javascript-1.svg" alt="" />
+      <img src="/vue-js-1.svg" alt="" />
+      <img src="/tailwindcss.svg" alt="" />
+      <img src="/astro.svg" alt="" />
+    </div>
   </div>
 </div>
 <script>
@@ -34,10 +36,17 @@
 </script>
 
 <style>
+  .scroll-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .scroller {
     max-width: 1440px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .scroller__inner {
