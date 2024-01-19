@@ -1,88 +1,88 @@
-<div class="infinity-scroll">
-  <div class="logos-container">
-    <div class="logos-slide">
-      <img src="/adobe-illustrator-cc-icon.svg" alt="" />
-      <img src="/adobe-photoshop-2.svg" alt="" />
-      <img src="/after-effects-1.svg" alt="" />
-      <img src="/figma-5.svg" alt="" />
-      <img src="/github-icon-1.svg" alt="" />
-      <img src="/html-1.svg" alt="" />
-      <img src="/css-3.svg" alt="" />
-      <img src="/javascript-1.svg" alt="" />
-      <img src="/vue-js-1.svg" alt="" />
-    </div>
-    <div class="logos-slide">
-      <img src="/tailwindcss.svg" alt="" />
-      <img src="/astro.svg" alt="" />
-      <img src="/adobe-illustrator-cc-icon.svg" alt="" />
-      <img src="/adobe-photoshop-2.svg" alt="" />
-      <img src="/after-effects-1.svg" alt="" />
-      <img src="/figma-5.svg" alt="" />
-      <img src="/github-icon-1.svg" alt="" />
-      <img src="/html-1.svg" alt="" />
-      <img src="/css-3.svg" alt="" />
-      <img src="/javascript-1.svg" alt="" />
-      <img src="/vue-js-1.svg" alt="" />
-    </div>
+<div class="scroller" data-speed="slower">
+  <div class="logos-slide scroller__inner">
+    <img src="/adobe-illustrator-cc-icon.svg" alt="" />
+    <img src="/adobe-photoshop-2.svg" alt="" />
+    <img src="/after-effects-1.svg" alt="" />
+    <img src="/figma-5.svg" alt="" />
+    <img src="/github-icon-1.svg" alt="" />
+    <img src="/html-1.svg" alt="" />
+    <img src="/css-3.svg" alt="" />
+    <img src="/javascript-1.svg" alt="" />
+    <img src="/vue-js-1.svg" alt="" />
+    <img src="/tailwindcss.svg" alt="" />
+    <img src="/astro.svg" alt="" />
   </div>
 </div>
+<script>
+  const scrollers = document.querySelectorAll(".scroller");
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
+  function addAnimation() {
+    scrollers.forEach((scroller) => {
+      scroller.setAttribute("data-animated", true);
+      const scrollerinner = scroller.querySelector(".scroller__inner");
+      const scrollerContent = Array.from(scrollerinner.children);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true);
+        scrollerinner.appendChild(duplicatedItem);
+      });
+    });
+  }
+</script>
+
 <style>
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .scroller {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
   }
-  .infinity-scroll {
-    overflow: hidden;
-    padding: 30px 0;
+
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  .scroller[data-animated="true"] {
     background-color: #f2f2f2;
-    white-space: nowrap;
-    position: relative;
-  }
-
-  .infinity-scroll:before,
-  .infinity-scroll:after {
-    position: absolute;
-    top: 0;
-    width: 180px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
-  .infinity-scroll:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #f2f2f2);
-  }
-  .infinity-scroll:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f2f2f2);
-  }
-
-  .infinity-scroll:hover .logos-slide {
-    animation-play-state: paused;
-  }
-
-  .logos-container{
     overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
   }
 
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 20s) linear infinite;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
   .logos-slide {
-    display: inline-flex;
-    animation: 30s slide infinite linear;
+    margin: 0;
+    padding-inline: 0;
   }
 
   .logos-slide img {
     height: 50px;
-    margin: 0 40px;
     transition: filter 0.3s ease;
-  }
-
-  @media (max-width: 767px) {
-    .logos-slide img {
-      margin: 0 40px;
-    }
   }
 </style>
